@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: secret_santa_development
+  host: localhost
+
+test:
+  <<: *default
+  database: secret_santa_test
+  host: localhost
+
+production:
+  <<: *default
+  database: secret_santa_production
+  username: secret_santa
+  password: <%= ENV['SECRET_SANTA_DATABASE_PASSWORD'] %>

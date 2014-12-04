@@ -1,0 +1,35 @@
+@import 'bootstrap';
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
+@import 'mixins';
+
+body {
+  @include full-background('background.png');
+  color: #f0f0f0;
+}
+
+.title {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 6em;
+  font-weight: 100;
+  text-shadow: 0px 0px 3px #990000;
+  margin: 90px auto 50px;
+  letter-spacing: 6.1px;
+  color: white;
+}
+
+#group-id-form {
+  opacity: 0.8;
+}
+
+footer.footer {
+  width: 100%;
+  position: absolute;
+  height: 40px;
+  bottom: 0;
+  font-size: 11px;
+  color: black;
+  a {
+    color: #cccccc;
+  }
+}
