@@ -2,6 +2,7 @@
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 @import 'mixins';
+@import 'flipclock';
 
 body {
   @include full-background('background.png');
@@ -20,6 +21,18 @@ body {
 
 #group-id-form {
   opacity: 0.8;
+}
+
+.clock {
+  padding: 0 65px;
+  margin-top: 50px;
+  .flip-clock-divider {
+    color: white;
+    .flip-clock-label {
+      color: white;
+      font-size: 20px;
+    }
+  }
 }
 
 footer.footer {

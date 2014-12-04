@@ -1,0 +1,17 @@
+<h1 class="title text-center">Game Starts</h1>
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <div class="clock" data-end-date="20141210"></div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <p>Sign up to play!</p>
+    <%= form_for(@participant) do |f| %>
+      <%= f.hidden_field(:group_id) %>
+      <%= f.text_field(:name, class: 'form-control input-lg', placeholder: 'Your Name') %>
+      <br />
+      <%= f.submit('Join!', class: 'btn btn-lg btn-primary btn-block') %>
+    <% end %>
+  </div>
+</div>
