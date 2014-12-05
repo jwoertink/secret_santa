@@ -56,9 +56,29 @@ footer.footer {
     color: #f0f0f0;
   }
 }
-
 @media (max-width: 1200px) {
   .flip-clock-label {
     display: none !important;
+  }
+  .clock {
+    zoom: 0.8;
+  }
+}
+@media (max-width: 990px) {
+  .clock {
+    margin-left: auto;
+    zoom:0.6;
+  }
+}
+
+@media (max-width: 630px) {
+  .clock {
+    margin-left: 45px;
+  }
+}
+@media (max-width: 450px) {
+  .clock {
+    margin-left: 75px;
+    zoom: 0.4;
   }
 }
