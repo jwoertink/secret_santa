@@ -1,0 +1,24 @@
+<h1 class="title text-center">Game Starts in</h1>
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <div class="clock" data-end-date="20141210"></div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <p class="lead text-center">Sign up to play! We will email you your secret recipient.</p>
+    <%= form_for(@participant) do |f| %>
+    <%= f.hidden_field(:group_id) %>
+    <div class="row">
+      <div class="col-sm-6">
+        <%= f.text_field(:name, class: 'form-control input-lg', placeholder: 'Your Name') %>
+      </div>
+      <div class="col-sm-6">
+        <%= f.email_field(:email, class: 'form-control input-lg', placeholder: 'Your Email') %>
+      </div>
+    </div>
+    <br />
+    <%= f.submit('Join the fun!', class: 'btn btn-lg btn-success btn-block') %>
+    <% end %>
+  </div>
+</div>
