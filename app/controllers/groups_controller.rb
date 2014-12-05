@@ -6,7 +6,7 @@ class GroupsController < ApplicationController
 
   def show
     @participant = Participant.new(group_id: params[:id])
-    @pre_game = Game.is_pregame?
+    @pre_game = Game.pregame?
   end
 
 end
