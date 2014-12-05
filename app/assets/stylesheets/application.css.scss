@@ -19,6 +19,13 @@ body {
   color: white;
 }
 
+.alert {
+  top: 45%;
+  width: 100%;
+  text-align: center;
+  left: 0;
+}
+
 #group-id-form {
   opacity: 0.8;
 }
@@ -35,14 +42,23 @@ body {
   }
 }
 
+.flip-clock-wrapper ul li a div div.inn {
+  text-shadow: 0 0px 3px #f00 !important;
+}
+
 footer.footer {
-  width: 100%;
-  position: absolute;
-  height: 40px;
-  bottom: 0;
+  position: fixed;
+  top: 10px;
+  left: 10px;
   font-size: 11px;
-  color: black;
+  color: #cccccc;
   a {
-    color: #cccccc;
+    color: #f0f0f0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .flip-clock-label {
+    display: none !important;
   }
 }

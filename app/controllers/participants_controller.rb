@@ -12,7 +12,7 @@ class ParticipantsController < ApplicationController
   private
 
   def participant_params
-    params.require(:participant).permit(:group_id, :name)
+    params.require(:participant).permit(:group_id, :name, :email)
   end
 
 end
