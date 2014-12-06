@@ -1,4 +1,4 @@
-namespace :notify
+namespace :notify do
 
   desc 'Send participants an email when game is on'
   task participants: :environment do
