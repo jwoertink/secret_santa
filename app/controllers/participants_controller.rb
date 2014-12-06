@@ -5,7 +5,7 @@ class ParticipantsController < ApplicationController
     if @participant.save
       redirect_to root_path, notice: 'YAY! Good luck'
     else
-      #do something
+      redirect_to group_path(participant_params[:group_id]), alert: "Oops. You're already signed up."
     end
   end
 

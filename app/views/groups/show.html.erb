@@ -1,6 +1,11 @@
-<% if @pre_game %>
+<% if Game.pregame? %>
   <%= render('pre_game') %>
 <% else %>
   <h1 class="title text-center">Game On!</h1>
   <p class="lead text-center">Go buy a gift, and make it fun!</p>
 <% end %>
+<div class="row stat-box">
+  <div class="col-sm-8 col-sm-offset-2">
+    There <%= "is".pluralize(@playing.count) %> <span class="accent"><%= pluralize(@playing.count, 'person') %></span> playing. So far there are <span class="accent"><%= @playing.taken.count %></span> secret santas. Your group ID is <span class="accent"><%= params[:id] %></span>. 
+  </div>
+</div>
