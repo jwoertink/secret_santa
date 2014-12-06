@@ -16,7 +16,7 @@ class Game
     available = playing.reject { |p| p.id == participant.id }
     recipient = available.sample
     if recipient
-      recipient.update_attribute(:taken, true)
+      recipient.update_attributes(taken: true, secret_santa_id: participant.id)
       ParticipantMailer.notify(participant, recipient).deliver
     end
     recipient
