@@ -10,4 +10,16 @@ class Game
     !pregame?
   end
 
+  def self.assign_santa(participant)
+    group_id = participant.group_id
+    playing = Participant.by_group(group_id).available
+    available = playing.reject { |p| p.id == participant.id }
+    recipient = available.sample
+    if recipient
+      recipient.update_attribute(:taken, true)
+      ParticipantMailer.notify(participant, recipient).deliver
+    end
+    recipient
+  end
+
 end

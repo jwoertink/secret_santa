@@ -11,4 +11,8 @@ class Participant < ActiveRecord::Base
     where(taken: true)
   end
 
+  def self.available
+    where(taken: false)
+  end
+
 end
